@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+
+            <div class="form-item">
+                <div class="title">Место или название отеля</div>
+                <div class="text">
+                    <div class="pin1"></div>
+                    <div class="input-text">Введите здесь место</div>
+                </div>
+            </div>
+            <div class="sep"></div>
+            <div class="form-item">
+                <div class="title">Заезд</div>
+                <div class="text">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <div>07 Февраля </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="point"></div>
+            </div>
+
+            <div class="form-item">
+                <div class="title">Выезд</div>
+                <div class="text">
+                    <div>22 Февраля</div>
+
+                </div>
+
+            </div>
+            <div class="down-open" onclick="">
+                <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                    <polyline points="6 9 12 15 18 9" style="&#10; color: #9a9a9a"/></svg>
+            </div>
+            <div class="sep"></div>
+
+            <div class="form-item">
+                <div class="title">
+                    <label for="room">Номера</label>
+                </div>
+                <div class="text">
+                    <div class="quantity">
+                        <input id="room" type="number" min="1" max="9" step="1" value="1">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="title">
+                    <label for="people">Взрослые</label>
+                </div>
+                <div class="text">
+                    <div class="quantity">
+                        <input id="people" type="number" min="0" max="9" step="1" value="1">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="title">
+                    <label for="child">Дети</label>
+                </div>
+                <div class="text">
+                <div class="quantity">
+                    <input id="child" type="number" min="0" max="9" step="1" value="0">
+                </div>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <button type="button" class="plus">
+                    <label class="btn-plus">+</label>
+                </button>
+            </div>
+            <div class="form-item">
+                <button type="button" class="serch">
+                    <label class="btn-text">НАЙТИ</label>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        jQuery('<div class="quantity-nav"><div class="quantity-button arrow-up"></div><div class="quantity-button arrow-down"></div></div>').insertAfter('.quantity input');
+        jQuery('.quantity').each(function() {
+            var spinner = jQuery(this),
+                input = spinner.find('input[type="number"]'),
+                btnUp = spinner.find('.arrow-up'),
+                btnDown = spinner.find('.arrow-down'),
+                min = input.attr('min'),
+                max = input.attr('max');
+
+            btnUp.click(function() {
+                var oldValue = parseFloat(input.val());
+                if (oldValue >= max) {
+                    var newVal = oldValue;
+                } else {
+                    var newVal = oldValue + 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+
+            btnDown.click(function() {
+                var oldValue = parseFloat(input.val());
+                if (oldValue <= min) {
+                    var newVal = oldValue;
+                } else {
+                    var newVal = oldValue - 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+
+html, body{
+    margin: 0px;
+}
+
+.container {
+    width: 1218px;
+    height: 145px;
+    background-color: white;
+    border: 0px solid grey;
+    margin-left: 20px;
+    margin-top: 22px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 0px 32px -9px rgba(110,106,110,1);
+    -moz-box-shadow: 0px 0px 32px -9px rgba(110,106,110,1);
+    box-shadow: 0px 0px 32px -9px rgba(110,106,110,1);
+    position:relative;
+    border: 0px solid grey;
+    width: 1170px; height: 91px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 22px;
+}
+.pin1 {
+    margin-right: 5px;
+    border-radius: 50% 50% 50% 0;
+    border: 2px solid #ed9915;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+}
+
+.pin1::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-left: -3px;
+    margin-top: -3px;
+    background-color: #ed9915;
+}
+.text {
+    display: flex;
+    flex-wrap: nowrap
+}
+
+.fa {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-size:20px;
+    color: #ed9915;
+    margin-right: 7px;
+}
+
+.title {
+    font-size: 12px;
+    font-family:"ProximaNova";
+}
+
+
+.form-item .text {
+    font-family: 'FiraSans';
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    margin-top: 3px;
+}
+.input-text {
+    color: #6b6b6b;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    width: 30px;
+    height: 26px;
+    text-align: center;
+    color: #8b9198;
+}
+
+.arrow-up {
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 7px solid #ed9915;
+    margin-bottom: 14px;
+    margin-left: 5px;
+}
+.arrow-down {
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #8b9198;
+    margin-left: 5px;
+}
+
+.quantity-nav {
+    float: right;
+    position: relative;
+    height: 40px;
+}
+
+.sep{
+    width: 2px;
+    height: 32px;
+    opacity: 0.81;
+    border-radius: 1px;
+    background-color: #e4e4e4;
+}
+.point{
+    width: 3px;
+    height: 3px;
+    background-color: #9a9a9a;
+    margin-top: 18px;
+}
+.down-open {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 18px;
+}
+
+.plus {
+    border: 0px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+    align-items: center;
+    opacity: 0.58;
+    background-color: #fdb038;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn-plus {
+    width: 70px;
+    height: 70px;
+}
+
+
+.form-item .serch {
+    border: 2px;
+    width: 175px;
+    height: 63px;
+    border-radius: 2px;
+    box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.09);
+    background-color: #ed9915;
+}
+.serch{
+    width: 993px;
+    height: 91px;
+    background-color: white;
+}
+.btn-text{
+    width: 60px;
+    height: 15px;
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.05);
+    font-family: 'Roboto', 'Helvetica', sans-serif ;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    text-align: left;
+    color: white;
+}
+
